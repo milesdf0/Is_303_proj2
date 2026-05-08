@@ -2,3 +2,11 @@
 
 import random
 
+#Move Class - Monet
+
+#Move Object - Katie
+
+#Pokemon Class - Miles
+
+#Pokemon Object - Owen
+
