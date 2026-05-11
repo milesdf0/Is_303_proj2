@@ -28,7 +28,6 @@ class Move:
         # randomly pick a damage value within the move's range
         return random.randint(self.low_attack_points, self.high_attack_points)
 
-
 # Move objects to test the class and generate some attack values
 
 tackle = Move("Tackle", "Normal", 5, 20)
@@ -50,3 +49,28 @@ for i in range(3):
     print(chosen_move.get_info())
     print("Generated attack value: ", chosen_move.generate_attack_value())
     move_list.remove(chosen_move)
+
+
+
+
+
+#Pokemon Class
+
+class Pokemon:
+    def __init__(self, name, elemental_type, hit_points):
+        self.name = name
+        self.elemental_type = elemental_type
+        self.hp = hit_points
+
+    def get_info(self):
+        return f"{self.name} - (Type: {self.elemental_type} - HP: {self.hit_points})"
+    
+    def heal(self):
+        self.hit_points += 15
+        print(f"{self.name} has been healed to {self.hit_points} hit points.")
+
+
+# Pokemon objects
+
+
+
