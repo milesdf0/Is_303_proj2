@@ -54,7 +54,7 @@ for i in range(3):
 
 
 
-#Pokemon Class
+# Pokemon Class
 
 class Pokemon:
     def __init__(self, name, elemental_type, hit_points):
