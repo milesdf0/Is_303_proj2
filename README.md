@@ -51,7 +51,9 @@ for i in range(3):
     move_list.remove(chosen_move)
 
 
-
+#Instructs the user to press enter to continue
+input("Press Enter to continue...")
+print()
 
 
 # Pokemon Class
@@ -63,14 +65,36 @@ class Pokemon:
         self.hp = hit_points
 
     def get_info(self):
-        return f"{self.name} - (Type: {self.elemental_type} - HP: {self.hit_points})"
+        return f"{self.name} - (Type: {self.elemental_type} - HP: {self.hp})"
     
     def heal(self):
-        self.hit_points += 15
-        print(f"{self.name} has been healed to {self.hit_points} hit points.")
+        self.hp += 15
+        print(f"{self.name} has been healed to {self.hp} hit points.")
 
 
 # Pokemon objects
 
+#Creates the 3 Pokemon as objects
+bulbasaur = Pokemon("Bulbasaur", "Grass", 60)
+charmander = Pokemon("Charmander", "Fire", 55)
+squirtle = Pokemon("Squirtle", "Water", 65)
+
+#Call get_info method for Charmander and print result
+print(charmander.get_info())
+
+#Call heal method for Charmander
+
+charmander.heal()
+print(charmander.get_info())
+
+#Hit points should have increased for Charmander
+
+#Put the Pokemon in a list
+pokemon_list = [bulbasaur, charmander, squirtle]
+
+#Loop through the list to print the info for each Pokemon
+print("\nPokemon Info")
+for pokemon in pokemon_list:
+    print(pokemon.get_info())
 
 
