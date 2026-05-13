@@ -20,12 +20,12 @@ class Move:
         self.low_attack_points = low_attack_points
         self.high_attack_points = high_attack_points
 
-    def get_info(self):
-        # return a formatted string with all the move's details
-        return f"{self.move_name} (Type: {self.elemental_type}): {self.low_attack_points} to {self.high_attack_points} Attack Points"
+    # return a formatted string with all the move's details
+def get_info(self):
+        return f"{self.move_name} (Type: {self.elemental_type}):{self.low_attack_points} to {self.high_attack_points} Attack Points"
 
-    def generate_attack_value(self):
         # randomly pick a damage value within the move's range
+def generate_attack_value(self):
         return random.randint(self.low_attack_points, self.high_attack_points)
 
 # Move objects to test the class and generate some attack values
@@ -53,7 +53,6 @@ for i in range(3):
 
 #Instructs the user to press enter to continue
 input("Press Enter to continue...")
-print()
 
 
 # Pokemon Class
